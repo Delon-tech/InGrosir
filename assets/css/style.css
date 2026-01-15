@@ -1,0 +1,241 @@
+/* --- Palet Warna & Font --- */
+:root {
+  --primary-color: #06b6d4; /* Hijau Tosca */
+  --secondary-color: #1a3e62; /* Biru Tua */
+  --accent-color: #facc15; /* Kuning */
+  --background-light: #f8fafc;
+  --background-dark: #e2e8f0;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --white: #ffffff;
+}
+
+body {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  background-color: var(--background-light);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --- Header dan Navigasi --- */
+.header {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.header a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header a:hover {
+  color: var(--accent-color);
+}
+
+.header .nav a {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 1.5rem;
+}
+
+/* --- Tampilan Utama --- */
+.hero {
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  color: var(--white);
+  text-align: center;
+  padding: 5rem 0;
+}
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* --- Form Pencarian --- */
+.search-form {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 0.5rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.search-form input[type="text"] {
+  flex-grow: 1;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+}
+.search-form input[type="text"]:focus {
+  outline: none;
+}
+.search-form .btn {
+  background-color: var(--accent-color);
+  color: var(--white);
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+/* --- Tampilan Card --- */
+.card-list,
+.produk-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 3rem 0;
+}
+.card,
+.produk-card {
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover,
+.produk-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+.card img,
+.produk-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.card-content,
+.produk-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card h3,
+.produk-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem;
+}
+.produk-info .harga {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 1rem 0 0.5rem;
+}
+
+/* --- Form --- */
+.form-container {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 3rem auto;
+}
+/* ... tambahkan gaya form lainnya dari desain sebelumnya ... */
+
+/* --- Footer --- */
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border-top: 1px solid var(--background-dark);
+}
+.footer p {
+  margin: 0 0 1rem;
+}
+.footer-nav a {
+  color: var(--white);
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.footer-nav a:hover {
+  color: var(--accent-color);
+}
+
+/* --- Responsif --- */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  .header .nav {
+    margin-top: 1rem;
+  }
+  .header .nav a {
+    font-size: 0.9rem;
+    margin-right: 1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .search-form {
+    flex-direction: column;
+  }
+  .search-form input[type="text"],
+  .search-form .btn {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  .card-list,
+  .produk-list {
+    grid-template-columns: 1fr;
+  }
+  .form-container {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+  .footer-nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
